@@ -1,0 +1,12 @@
+stages:
+  - build
+
+
+image: greyrook/cde-dev-py27:06b47658f5487efb0b6b5129a96759c32605395d
+
+build:
+  stage: build
+  script:
+    - cp src/loraconf.sample.h src/loraconf.h
+    - pip install platformio
+    - platformio run -e heltec_wifi_lora_32 -e ttgov1 -e ttgov2 -e lopy -e lopy4 -e lolin32lite_lora -e lolin32_lora
