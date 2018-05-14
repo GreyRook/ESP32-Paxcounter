@@ -37,6 +37,8 @@ Refer to LICENSE.txt file in repository for more details.
 #include <esp_spi_flash.h>          // needed for reading ESP32 chip attributes
 #include <esp32-hal-log.h>          // needed for ESP_LOGx on arduino framework
 
+#include "lorawan.h"
+
 // Initialize global variables
 configData_t cfg;                   // struct holds current device configuration
 osjob_t sendjob, initjob;           // LMIC jobs
